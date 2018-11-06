@@ -1,0 +1,64 @@
+# Serverless.yml is the configuration the CLI
+# uses to deploy your code to your provider of choice
+service: serverless-stripe-backend
+
+custom:
+  serverless-offline:
+    port: 3333
+
+# The `provider` block defines where your service will be deployed
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: production
+  profile: default
+  memorySize: 512 # Overwrite the default memory size. Default is 1024
+  timeout: 30
+  region: ca-central-1
+  environment:
+    WEB_HOST: "https://coastbeachwear.com"
+    STRIPE_SECRET_KEY: "asasasas"
+    SHIPPO_API_KEY: "asasasas" 
+
+# The `functions` block defines what code to deploy
+functions:
+  createCustomer:
+    handler: customer.handler
+    # The `events` block defines how to trigger the handler.createCharge code
+    events:
+      - http:
+          path: customers
+          method: post
+          cors: true
+  createOrder:
+    handler: order.handler
+    # The `events` block defines how to trigger the handler.createCharge code
+    events:
+      - http:
+          path: orders
+          method: post
+          cors: true
+  calcTaxes:
+    handler: calc_extras.handler
+    events:
+      - http:
+          path: calc_extras
+          method: post
+          cors: true
+  afterOrderProcess:
+    handler: after_order_process.handler
+    events:
+      - http:
+          path: order_processed
+          method: post
+          cors: true
+  test:
+    handler: test.handler
+    events:
+      - http:
+          path: test
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline

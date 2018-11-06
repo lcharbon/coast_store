@@ -1,0 +1,92 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	vertical-align: top;
+	display: inline-block;
+	text-align: left;
+	position: relative;
+}
+
+.error-section {
+	position: relative;
+	height: 16px;
+	padding-top: 4px;
+	padding-left: 8px;	
+}
+
+.error-message {
+	position: absolute;
+	top: 6px;
+	left: 7px;
+	font-size: 8px;
+	letter-spacing: 0.22px;
+	font-family: quantumrounded, sans-serif;
+	color: #EB2D36;
+	white-space: nowrap;
+}
+
+.placeholder {     
+	font-size: 9px;
+	color: #999999;
+	font-weight: normal;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	margin-top: 3px;
+	padding: 0 0.93333em;
+	user-select: none;
+	pointer-events: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+	opacity: 1;
+	transition: all 0.2s ease-out;
+}
+
+.placeholder-invalid {
+	composes: placeholder;
+	color: #EB2D36;
+}
+
+.placeholder-hidden {
+	opacity: 0;
+	display: none;
+}
+
+.text-area {
+	position: relative;
+}
+
+.input {
+	border-radius: 2px;
+	box-sizing: border-box;
+	height: 40px;
+	border: none;
+	padding: 10px 25px 8px 12px;
+    font-size: 13px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    background-color: quaternary;
+    color: #383838;
+    font-family: quantumrounded, sans-serif;
+    overflow: hidden;
+}
+
+input.input:-webkit-autofill {
+	background-color: quaternary;
+	-webkit-box-shadow: 0 0 0px 1000px quaternary inset;
+}
+
+input.input-filled:-webkit-autofill {
+	background-color: quaternary;
+	-webkit-box-shadow: 0 0 0px 1000px quaternary inset;
+}
+
+
+.input-filled {
+	composes: input;
+	padding: 13px 35px 5px 13px;
+}

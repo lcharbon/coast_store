@@ -1,0 +1,386 @@
+<html>
+	<head>
+	</head>
+	<body style= "background-color: #d3cebb;">
+		<table style="font-family: sans-serif;" width="100%">
+			<tr>
+				<td align="center">
+					<img src="<%= process.env.WEB_HOST + "/media/emails/coast_logo.png" %>">
+				</td>
+			</tr>
+			<tr height="18" class="row-spacer">
+			</tr>
+			<tr>
+				<td align="center">
+					<table  cellspacing="0" style="background-color: #ecede3; font-size: 16px; letter-spacing: 1.7px; color: #4f6972; font-weight: 600; line-height: 22px;" width="440">
+						<tr>				
+							<td width="8">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+							<td id="orderId" height="58" align="center">
+								<%= $t["121"] + " " + orderData.id.toUpperCase() %> 
+							</td>
+							<td width="10">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr height="10" class="row-spacer">
+			</tr>
+			<% if (orderData.shippingAddr) { %>
+			<tr>
+				<td align="center">
+					<table cellspacing="0" cellpadding="0" style="background-color: #ecede3;" width="440">
+						<tr>
+							<td width="19" height="12" style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+							<td style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+							<td width="19" style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<table id="shippingAddr" cellspacing="0" width="100%">			
+									<tr>
+										<td style="color: #404040; font-size: 17px; letter-spacing: 1.8px">
+											<%= $t["96"] %> 
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<table style="color: #767676; font-size: 16px;">
+												<% if (orderData.shippingAddr.company) { %>
+													<tr>
+														<td>
+															<%= orderData.shippingAddr.company %> 
+														</td>
+													</tr>
+												<% } %>
+												<tr>
+													<td>
+														<%= orderData.shippingAddr.name %>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<%= (orderData.shippingAddr.line2? orderData.shippingAddr.line2 + "-" : "")  +  orderData.shippingAddr.line1 %> 
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<%= `${orderData.shippingAddr.city}, ${orderData.shippingAddr.state}, ${orderData.shippingAddr.country}` %> 
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<%= orderData.shippingAddr.postal_code %>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td height=18px></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</td>	
+			</tr>
+			<tr height="10" class="row-spacer">
+			</tr>
+			<tr>
+				<td align="center">
+					<table cellspacing="0" cellpadding="0" style="background-color: #ecede3;" width="440">
+						<tr>
+							<td width="19" height="12" style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+							<td style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+							<td width="19" style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<table cellspacing="0" width="100%">			
+									<tr>
+										<td style="color: #404040; font-size: 17px; letter-spacing: 1.8px">
+											<%= $t["97"] %> 
+										</td>
+									</tr>
+									<tr>
+										<td height="4" style="font-size: 0px">
+											<div>
+												&nbsp;
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td align="center" style="color: #767676; font-size: 16px;">
+											<%= orderData.shippingRate.provider + ((orderData.shippingRate.servicelevel && ` ${orderData.shippingRate.servicelevel}`)|| "")  %> 
+										</td>
+									</tr>
+									<tr>
+										<td align="center" style="color: #767676; font-size: 16px;">
+											<%= $t[(orderData.shippingRate.estimated_days > 1? "63" : "64" )].replace("$0", orderData.shippingRate.estimated_days) %>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td height=18px></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</td>	
+			</tr>
+			<tr height="10" class="row-spacer">
+			</tr>
+			<tr>
+				<td align="center">
+					<table cellspacing="0" cellpadding="0" style="background-color: #ecede3;" width="440">
+						<tr>
+							<td width="19" height="12" style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+							<td style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+							<td width="19" style="font-size: 0px">
+								<div>
+									&nbsp;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<table cellspacing="0" width="100%">			
+									<tr>
+										<td style="color: #404040; font-size: 17px; letter-spacing: 1.8px">
+											<%= $t["95"] %>
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<table style="color: #767676; font-size: 16px;">
+												<% if (orderData.billingAddr.company) { %>
+													<tr>
+														<td>
+															<%= orderData.billingAddr.company %> 
+														</td>
+													</tr>
+												<% } %>
+												<tr>
+													<td>
+														<%= orderData.billingAddr.name %> 
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<%= (orderData.billingAddr.line2? orderData.billingAddr.line2 + "-" : "")  +  orderData.billingAddr.line1 %> 
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<%= `${orderData.billingAddr.city}, ${orderData.billingAddr.state}, ${orderData.billingAddr.country}` %> 
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<%= orderData.billingAddr.postal_code %>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td height=18px></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</td>	
+			</tr>
+			<tr height="10" class="row-spacer">
+			</tr>
+			<% } %>
+			<tr>
+				<td align="center">
+					<table cellspacing="0" style="background-color: #ecede3;" width="440">
+						<% orderData.purchases.forEach(function(purchase) { %>
+							<tr>
+								<td class="">
+									<table style="border-bottom: 1px solid #deddde;">
+										<tr>
+											<td width="4">
+												<div>
+													&nbsp;
+												</div>
+											</td>
+											<td width="80">
+												<img src="<%= process.env.WEB_HOST + purchase.variant.images[0] %>" width="72" height="72">
+											</td>
+											<td width="5">
+												<div>
+													&nbsp;
+												</div>
+											</td>
+											<td width="280" valign="top">
+												<table style="color: #404040;">
+													<tr>
+														<td height="20" valign="top" style="font-size: 21px; letter-spacing: 1.7px;">
+															Coast <%= purchase.variant.product.name %>
+														</td>
+													</tr>
+													<tr>
+														<td style="font-size: 14px; letter-spacing: 1.6px;">
+															<%= purchase.variant.name %>
+														</td>
+													</tr>		
+												</table>
+											</td>
+											<td valign="top">
+												<table style="color: #4f6972; font-weight: 500;" width="80">
+													<tr>
+														<td align="right" style="font-size: 13px; letter-spacing: 0.9px;">
+															<%= $t["26"] %>&nbsp;<%= purchase.quantity %>
+														</td>
+													</tr>
+													<tr>
+														<td align="right" style="font-size: 16px">
+															<%= purchase.price %>
+														</td>
+													</tr>		
+												</table>
+											</td>
+											<td width="4">
+												<div>
+													&nbsp;
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td height="6">
+												<div style="font-size: 0px">
+													&nbsp;
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						<% }); %>
+						<tr>
+							<td>
+								<table>
+									<tr>
+										<td width="4">
+											<div>
+												&nbsp;
+											</div>
+										</td>
+										<td>
+											<table style="font-size: 18px; color: #767676; letter-spacing: 1.5px">
+												<tr id="subtotal">
+													<td width="241">
+														<%= $t["28"] %>
+													</td>
+													<td width="179" height="41" align="right">
+														<%= orderData.totals.subtotal %>
+													</td>
+												</tr>
+												<tr id="shipping">
+													<td>
+														<%= $t["71"] %>
+													</td>
+													<td width="179" height="41" align="right">
+														<%= orderData.totals.shipping %>
+													</td>
+												</tr>
+												<tr id="taxes">
+													<td>
+														<%= $t["70"] %>
+													</td>
+													<td width="179" height="41" align="right">
+														<%= orderData.totals.taxes %>
+													</td>
+												</tr>
+												<tr id="total">
+													<td colspan="4">
+														<table width="100%" style="border-top: 2px solid #4f6972; font-size: 19px; color: #767676; letter-spacing: 1.5px">
+															<tr>
+																<td>
+																	<%= $t["72"] %>
+																</td>
+																<td width="179" height="41" align="right">
+																	<%= orderData.totals.total %>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td width="4">
+											<div>
+												&nbsp;
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	margin-bottom: 16px;
+	background-color: quaternary;
+}
+
+.addition-container {
+	padding-top: 12px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.addition {
+	display: table;
+	border-spacing: 0 0px;
+	width: 100%;
+	border-bottom: 2px solid primary;
+}
+
+.line {
+	display: table-row;
+}
+
+.cell {
+	display: table-cell;
+	font-family: quantumrounded, sans-serif;
+    font-size: 15px;
+    color: rgb(118, 118, 118);
+    letter-spacing: 1px;
+    padding: 12px 0px;
+}
+
+.caption {
+	composes: cell;
+	padding-left: 10px;
+}
+
+.amount {
+	composes: cell;
+	text-align: right;
+}
+
+.total-container {
+	padding-top: 2px;
+	margin: 0px 10px;
+}
+
+.total {
+	display: table;
+	border-spacing: 0 0px;
+	width: 100%;
+}
+
+
+.international-notice {
+	font-size: 10px;
+    font-family: sans-serif;
+    color: rgb(118, 118, 118);
+    padding: 2px 20px 12px 20px;
+}

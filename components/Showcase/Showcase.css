@@ -1,0 +1,60 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	height: 750px;
+	background-color: primary;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.logo {
+	position: absolute;
+    top: 56px;
+    left: 82px;
+	width: 390px;
+}
+
+.logo svg {
+	fill: quaternary;
+}
+
+.product-showcase {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 692px;
+}
+
+.torso {
+	position: absolute;
+	top: -350px;
+	right: 94px;
+	height: 350px;
+}
+
+.video-section {
+	position: absolute;
+	bottom: 285px;
+	left: 30px;
+	width: calc(100% - 780px);
+	min-width: 600px;
+}
+
+.video-container {
+	width: 284px;
+	position: absolute;
+}
+
+.video-container-left {
+	composes: video-container;
+	left: 24%;
+	margin-left: -142px;
+}
+
+.video-container-right {
+	composes: video-container;
+	right: 25%;
+	margin-right: -142px;
+}

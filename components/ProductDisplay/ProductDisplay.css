@@ -1,0 +1,88 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	position: relative;
+	width: 692px;
+}
+
+.main0 {
+	composes: main;
+}
+
+.main1 {
+	composes: main;
+}
+
+.header {
+	position: relative;
+	height: 47px;
+	background-color: primary;
+}
+
+.film {
+	height: 144px;
+	background-color: rgba(0, 0, 0, 0.49);
+	position: relative;
+}
+
+.image {
+	position: absolute;
+	height: 100%;
+	right: 94px;
+}
+
+.button {
+	display: inline-block;
+	font-weight: 200;
+	letter-spacing: 1px;
+	border: 2px solid quaternary;
+	border-radius: 2px;
+	padding: 10px 21px 7px 21px;
+	cursor: pointer;
+	font-family: quantumrounded, sans-serif;
+	font-size: 17px;
+	color: quaternary;
+}
+
+.title {
+	position: absolute;
+	top: 16px;
+    left: 81px;
+    font-weight: 200;
+    font-family: quantumrounded, sans-serif;
+    font-size: 16px;
+    color: quaternary;
+    letter-spacing: 2.1px;
+    text-align: center;
+}
+
+.button:active {
+	color: primary;
+	background-color: rgba(255,255,255,0.58);
+}
+
+.button-view {
+	composes: button;
+	position: absolute;
+	top: 47px;
+	right: 500px;
+}
+
+.tip {
+	position: absolute;
+	overflow: hidden;
+	left: -35px;
+	height: 100%;
+	width: 60px;
+}
+
+.triangle {
+	position: absolute;
+    top: -52px;
+    left: 10px;
+    width: 105px;
+    height: 106px;
+    border-radius: 50%;
+	background-color: primary;
+}

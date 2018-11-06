@@ -1,0 +1,130 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	position: relative;
+	height: 350px;
+	background-color: quaternary;
+	height: 154px;
+	width: 100%;
+	border-bottom: 4px solid secondary;
+}
+
+.inner {
+	width: 100%;
+}
+
+.slider {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space:nowrap;
+	padding: 0 20px;
+}
+
+.slider::-webkit-scrollbar {
+	width: 0px;  /* remove scrollbar space */
+	background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.slide {
+	position: absolute;
+	width: 100%;
+}
+
+.title {
+	padding: 18px 18px;
+	font-size: 25px;
+	font-family: quantumrounded, sans-serif;
+	letter-spacing: 1.9px;
+	color: primary;
+}
+
+.icons-layout {
+	padding: 10px 10px;
+	margin: 10px auto;
+	width: 720px;
+	background-color: quaternary;
+}
+
+.feature {
+	display: inline-block;
+	vertical-align: top;
+	width: 140px;
+	padding: 7px 12px 0 12px;
+	box-sizing: border-box;
+}
+
+.icon-container {
+	width: 82px;
+	margin: 15px auto;
+}
+
+.icon-container svg path, .icon-container svg circle, .icon-container svg line{
+	stroke: primary;
+	stroke-width: 3.9;
+}
+
+.icon-title {
+	font-size: 9px;
+	text-align: center;
+	font-family: quantumrounded, sans-serif;
+	color: primary;
+	word-spacing: 0.9px;
+	white-space: pre-line;
+}
+
+.control-container {
+	position: absolute;
+	width: 70px;
+	height: 100%;
+	background-color: rgb(236, 237, 227, 0.84);
+}
+
+.forward-control-container {	
+	composes: control-container;
+	right: 0;
+}
+
+.back-control-container {
+	composes: control-container;
+	left: 0;
+}
+
+.scroll-control {
+	height: 82px;
+	width: 34px;
+	background-color: primary;
+	cursor: pointer;
+	position: absolute;
+	top: 47%;
+	right: 11px;
+	transform: translateY(-50%);
+	border-radius: 1px;
+}
+
+.forward-scroll-control {
+	composes: scroll-control;
+	right: 11px;
+}
+
+.back-scroll-control {
+	composes: scroll-control;
+	left: 11px;
+}
+
+.arrow-container {
+	width: 32px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.back-scroll-control svg {
+	transform: scaleX(-1);
+	filter: fliph; /*IE*/
+}
+
+.arrow-container svg {
+	fill: quaternary;
+}

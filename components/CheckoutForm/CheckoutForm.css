@@ -1,0 +1,14 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.header {
+	position: absolute;
+	font-weight: 200;
+	top: 25.5px;
+    padding-bottom: 28px;
+    padding-top: 22px;
+    font-family: quantumrounded, sans-serif;
+    font-size: 25px;
+    color: primary;
+    letter-spacing: 2.4px;
+}

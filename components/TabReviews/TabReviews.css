@@ -1,0 +1,28 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.content {
+	position: relative;
+	height: 600px;
+	width: 960px;
+	background-color: quaternary;
+}
+
+.review-list {
+	margin-top: 14px;
+	height: 440px;
+	overflow-y: scroll;
+	padding-right: 12px;
+}
+
+.title {
+	font-family: quantumrounded, sans-serif;
+	color: primary;
+	margin-bottom: 34px;
+}
+
+.reviews-container {
+	position: absolute;
+    top: 0;
+    left: 100px;
+}

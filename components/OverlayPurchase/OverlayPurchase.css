@@ -1,0 +1,70 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	background-color: quaternary;
+	position: relative;
+}
+
+.tab-content {
+	padding-top: 32px;
+}
+
+.add-button {
+	position: absolute;
+	bottom: 20px;
+	right: 24px;
+	padding: 9px 32px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-weight: 200;
+	letter-spacing: 0.9px;
+	font-family: quantumrounded, sans-serif;
+	font-size: 17px;
+	background-color: primary;
+	color: quaternary;
+	text-align: center;
+}
+
+.add-button:active {
+	color: quaternary;
+	background-color: secondary;
+}
+
+.add-button-processing {
+	composes: add-button;
+	color: quaternary;
+	background-color: primary;
+	padding: 18px 32px 18px 32px;
+}
+
+.add-button-caption {
+	position: relative;
+	display: inline-block;
+}
+
+.add-button-plus {
+	display: inline-block;
+	font-size: 32px;
+	padding-right: 12px;
+	vertical-align: middle;
+}
+
+.add-button-processing .add-button-caption:after {
+  overflow: hidden;
+  position: absolute;
+  left: 100%;
+  font-family: quantumrounded, sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  vertical-align: bottom;  
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}

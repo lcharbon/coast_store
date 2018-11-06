@@ -1,0 +1,23 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	height: 90px;
+	width: 100%;
+	text-align: left;
+	font-size: 22px;
+	padding-left: 32px;
+}
+
+.bar {
+	padding: 17px 0;
+}
+
+.bar-element {
+	display: inline-block;
+}
+
+.separator {
+	padding: 0 16px;
+	user-select: none;
+}

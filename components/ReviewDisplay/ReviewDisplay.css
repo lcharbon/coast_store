@@ -1,0 +1,95 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	position: relative;
+	width: 500px;
+	background-color: #fff;
+	box-sizing: border-box;
+	padding: 12px;
+	font-family: Helvetica, sans-serif;
+	margin-bottom: 12px;
+	overflow: hidden;
+}
+
+.review {
+	margin-top: 6px;
+	padding-right: 40px;
+	line-height: 19.32px;
+	font-size: 14px;
+	color: #1d2129;
+}
+
+.thumbnail {
+	display: inline-block;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}
+
+.summary {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px
+}
+
+.name {
+	letter-spacing: .15px;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+}
+
+.date {
+	font-size: 12px;
+	line-height: 16px;
+	color: #90949c;
+}
+
+.link-container {
+	position: absolute;
+	top: -58px;
+	right: -58px;
+	width: 116px;
+	height: 116px;
+	border-radius: 50%;
+	background-color: #4267b2;
+	cursor: pointer;
+}
+
+.link-caption {
+	position: absolute;
+	top: 64px;
+	left: 16px;
+	font-size: 7px;
+	letter-spacing: 0.9px;
+	color: #fff;
+}
+
+.link-icon {
+	position: absolute;
+	top: 74px;
+	left: 27px;
+	width: 26px;
+}
+
+.link-icon svg {
+	fill: #fff;
+}
+
+.rating {
+	display: inline-block;
+	vertical-align: top;
+    padding-left: 36px;
+    padding-top: 5px;
+}
+
+.star {
+	width: 15px;
+	display: inline-block;
+	padding: 0px 1px;
+}
+
+.star svg {
+	fill: primary;
+}

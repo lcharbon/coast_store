@@ -1,0 +1,67 @@
+[
+	{
+		"id": "0001",
+		"name": "Genesis",
+		"version": "1.0.0",
+		"price": 78.00,
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"variants": [
+			{
+				"id": "0001-010000-006005-00s",
+				"color": "6005",
+				"size": "s",
+				"images": ["/media/product/genesis_blue_1.jpg", "/media/product/genesis_blue_2.jpg", "/media/product/genesis_blue_3.jpg", "/media/product/genesis_blue_4.jpg", "/media/product/genesis_blue_5.jpg", "/media/product/genesis_blue_6.jpg"],
+				"showcaseImage": "/media/product/swimsuit_blue.png"
+			},
+			{
+				"id": "0001-010000-006005-00m",
+				"color": "6005",
+				"size": "m",
+				"images": ["/media/product/genesis_blue_1.jpg", "/media/product/genesis_blue_2.jpg", "/media/product/genesis_blue_3.jpg", "/media/product/genesis_blue_4.jpg", "/media/product/genesis_blue_5.jpg", "/media/product/genesis_blue_6.jpg"],
+				"showcaseImage": "/media/product/swimsuit_blue.png"
+			},
+			{
+				"id": "0001-010000-006005-00l",
+				"color": "6005",
+				"size": "l",
+				"images": ["/media/product/genesis_blue_1.jpg", "/media/product/genesis_blue_2.jpg", "/media/product/genesis_blue_3.jpg", "/media/product/genesis_blue_4.jpg", "/media/product/genesis_blue_5.jpg", "/media/product/genesis_blue_6.jpg"],
+				"showcaseImage": "/media/product/swimsuit_blue.png"
+			},
+			{
+				"id": "0001-010000-006005-0xl",
+				"color": "6005",
+				"size": "xl",
+				"images": ["/media/product/genesis_blue_1.jpg", "/media/product/genesis_blue_2.jpg", "/media/product/genesis_blue_3.jpg", "/media/product/genesis_blue_4.jpg", "/media/product/genesis_blue_5.jpg", "/media/product/genesis_blue_6.jpg"],
+				"showcaseImage": "/media/product/swimsuit_blue.png"
+			},
+						{
+				"id": "0001-010000-009240-00s",
+				"color": "9240",
+				"size": "s",
+				"images": ["/media/product/genesis_black_7.jpg", "/media/product/genesis_black_1.jpg", "/media/product/genesis_black_2.jpg", "/media/product/genesis_black_3.jpg", "/media/product/genesis_black_4.jpg", "/media/product/genesis_black_5.jpg", "/media/product/genesis_black_6.jpg"],
+				"showcaseImage": "/media/product/swimsuit_black.png"
+			},
+			{
+				"id": "0001-010000-009240-00m",
+				"color": "9240",
+				"size": "m",
+				"images": ["/media/product/genesis_black_7.jpg", "/media/product/genesis_black_1.jpg", "/media/product/genesis_black_2.jpg", "/media/product/genesis_black_3.jpg", "/media/product/genesis_black_4.jpg", "/media/product/genesis_black_5.jpg", "/media/product/genesis_black_6.jpg"],
+				"showcaseImage": "/media/product/swimsuit_black.png"
+			},
+			{
+				"id": "0001-010000-009240-00l",
+				"color": "9240",
+				"size": "l",
+				"images": ["/media/product/genesis_black_7.jpg", "/media/product/genesis_black_1.jpg", "/media/product/genesis_black_2.jpg", "/media/product/genesis_black_3.jpg", "/media/product/genesis_black_4.jpg", "/media/product/genesis_black_5.jpg", "/media/product/genesis_black_6.jpg"],
+				"showcaseImage": "/media/product/swimsuit_black.png"
+			},
+			{
+				"id": "0001-010000-009240-0xl",
+				"color": "9240",
+				"size": "xl",
+				"images": ["/media/product/genesis_black_7.jpg", "/media/product/genesis_black_1.jpg", "/media/product/genesis_black_2.jpg", "/media/product/genesis_black_3.jpg", "/media/product/genesis_black_4.jpg", "/media/product/genesis_black_5.jpg", "/media/product/genesis_black_6.jpg"],
+				"showcaseImage": "/media/product/swimsuit_black.png"
+			}
+		]
+	}
+]

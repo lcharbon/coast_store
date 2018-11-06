@@ -1,0 +1,64 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	position: absolute;
+	top: 64%;
+	left: 50%;
+	margin: -210px 0 0 -200px;
+}
+
+.title {
+	width: 400px;
+    margin-bottom: 24px;
+    left: 0;
+	font-weight: 200;
+	font-family: quantumrounded, sans-serif;
+    font-size: 22px;
+    color: quaternary;
+    letter-spacing: 2.1px;
+    text-align: center;
+}
+
+.order-list {
+	position: relative;
+	background-color: quaternary;
+	width: 400px;
+	min-height: 300px;
+	padding-bottom: 40px;
+}
+
+.purchase-list {
+	max-height: 350px;
+	overflow: scroll;
+}
+
+.empty {
+	position: absolute;
+	top: 50%;
+	margin-top: -22px;
+	width: 100%;
+	color: quinary;
+	font-size: 19px;
+	font-family: quantumrounded, sans-serif;
+	font-weight: 200;
+	letter-spacing: 1.6px;
+	text-align: center;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 40px;
+}
+
+.subtotal {
+	font-size: 14px;
+	color: #363636;
+	font-family: quantumrounded, sans-serif;
+	letter-spacing: 1.1px;
+	line-height: 40px;
+	text-align: right;
+	padding-right: 10px;
+}

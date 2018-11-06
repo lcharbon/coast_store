@@ -1,0 +1,8 @@
+{
+	"env": "development",
+	"gaid": "UA-107752778-2",
+	"apiHost": "http://localhost:3333",
+	"stripePublicAPIKey": "saasas",
+	"shippoAPIKey": "sasa",
+	"designControler": false
+}

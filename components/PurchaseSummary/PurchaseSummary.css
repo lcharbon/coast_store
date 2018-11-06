@@ -1,0 +1,97 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	position: relative;
+	box-sizing: border-box;
+	height: 96px;
+	border-bottom: 1px solid #deddde;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.main-read-only {
+	composes: main;
+	cursor: auto;
+}
+
+.thumbnail {
+	height: 72px;
+	width: 72px;
+	margin: 12px 8px;
+	object-fit: contain;
+}
+
+.title {
+	position: absolute;
+	top: 12px;
+	left: 87px;
+	font-size: 18px;
+	font-family: quantumrounded, sans-serif;
+	color: quinary;
+	
+}
+
+.name {
+	font-size: 18px;
+	letter-spacing: 0.9px;
+}
+
+.style {
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	line-height: 20px
+}
+
+.addition {
+	position: absolute;
+	top: 7px;
+	right: 9px;
+	color: quinary;
+	font-family: quantumrounded, sans-serif;
+	text-align: right;
+
+}
+
+.price {
+	font-size: 11px;
+	letter-spacing: 0.9px;
+}
+
+.quantity {
+	font-size: 9.5px;
+	letter-spacing: 0.9px;
+	line-height: 25px;
+}
+
+.remove {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+}
+
+.remove:active {
+	background-color: quinary;
+}
+
+.remove > div {
+	position: absolute;
+	bottom: 4px;
+	right: 8px;
+	width: 13px;
+}
+
+.remove svg {
+	stroke: quinary;
+}
+
+.remove:active svg {
+	stroke: quaternary;
+}
+
+
+

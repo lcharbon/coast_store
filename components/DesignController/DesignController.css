@@ -1,0 +1,8 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	position: fixed;
+	top: 0;
+	left: 0;
+}

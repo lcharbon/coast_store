@@ -1,0 +1,13 @@
+@value colors: "../../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.main {
+	cursor: pointer;
+	padding: 0 1px;
+	user-select: none;
+}
+
+.main-selected {
+	composes: main;
+	border-bottom: 2px solid primary;
+}

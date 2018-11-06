@@ -1,0 +1,89 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.footer-main {
+	background-color: primary;
+	height: 48px;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	left: 32px;
+	top: 10px;
+	width: 69px;
+}
+
+.logo svg {
+	fill: quaternary;
+}
+
+.menus {
+	position: absolute;
+	left: 114px;
+	height: 100%;
+}
+
+.menu-button {
+	display: inline-table;
+	padding: 0 10px;
+	margin-left: 12px;
+	height: 100%;
+	vertical-align: top;
+}
+
+.menu-button:active {
+	background-color: quaternary;
+}
+
+.menu-button:active .menu-button-caption {
+	color: secondary;
+}
+
+.menu-button-capiton {
+	vertical-align: middle
+}
+
+.menu-button-caption {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	padding-top: 3px;
+	color: quaternary;
+	font-family: quantumrounded, sans-serif;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.social-hub {
+	vertical-align: middle;
+	display: table;
+	float: right;
+	height: 100%;
+	margin-right: 31px;
+}
+
+.social-link {
+	cursor: pointer;
+	display: table-cell;
+	vertical-align: middle;
+	width: 82px;
+}
+
+.social-link:active {
+	background-color: quaternary;
+}
+
+.social-icon {
+	display: block;
+	width: 36px;
+	margin: 0 auto;
+}
+
+.social-icon svg {
+	fill: quaternary;
+}
+
+.social-icon:active svg {
+	fill: secondary;
+}

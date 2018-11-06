@@ -1,0 +1,8 @@
+{
+	"env": "production",
+	"gaid": "UA-107752778-1",
+	"apiHost": "https://api.coastbeachwear.com",
+	"stripePublicAPIKey": "adsad",
+	"shippoAPIKey": "1212",
+	"designControler": false
+}

@@ -1,0 +1,55 @@
+@value colors: "../../main/colors.css";
+@value primary, secondary, tertiary, quaternary, quinary from colors;
+
+.video-thumbnail {
+	height: 160px;
+	opacity: 0.90;
+	display: block;
+}
+
+.play-button {
+	position: absolute;
+	top: 42px;
+	left: 104px;
+	border-radius: 50%;
+	background-color: quaternary;
+	height: 76px;
+	width: 76px;
+	border: 2px solid white;
+	box-sizing: border-box;
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.play-icon {
+	position: absolute;
+	top: 16px;
+	left: 24px;
+	width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 36px solid quinary;
+}
+
+.title-section {
+	box-sizing: border-box;
+	height: 42px;
+	background-color: quaternary;
+	opacity: 0.85;
+	padding-top: 12px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	color: primary;
+	text-align: center;
+	font-size: 20px;
+	font-family: inkburrow_ext, sans-serif;
+	letter-spacing: 2px;
+	overflow: hidden;
+	font-weight: 1000;
+}
+
+.video-player {
+	display: block;
+}
+

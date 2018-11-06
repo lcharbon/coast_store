@@ -1,0 +1,12 @@
+{
+	"cad": {
+		"countries": ["ca"],
+		"conversionCAD": 1,
+		"primary": true
+	},
+	"usd": {
+		"countries": ["us"],
+		"default": true,
+		"conversionCAD": 0.80
+	}
+}
